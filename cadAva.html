@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> LaAFIF App </title>
+    <!-- CDNS -->
+    <link rel="stylesheet" href="src/css/index.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Link para o CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav
+        class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary animate__animated animate__fadeInDown">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">LaAFIF App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active animate__animated animate__bounceInLeft" aria-current="page"
+                            href="index.html">
+                            <i class="fas fa-house-user"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated animate__bounceInLeft" style="animation-delay: 0.2s;"
+                            href="index.html">
+                            <i class="fas fa-cog me-2"></i> Configurações
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger animate__animated animate__bounceInLeft"
+                            style="animation-delay: 0.5s;" id="logoutButton" href="#">
+                            <i class="fas fa-sign-out-alt"></i> Sair
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Cadastrar Avaliação</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="container py-5">
+        <h2 class="text-center mb-4">LaAFIF - Registro de Medidas</h2>
+
+        <!-- Escolha da quantidade -->
+        <div id="config-quantidade">
+            <div class="mb-3">
+                <label class="form-label">Quantas pessoas serão avaliadas? (0 = infinito)</label>
+                <input type="number" class="form-control border border-secondary" id="quantidadeTotal" value="0"
+                    min="0">
+            </div>
+            <button class="btn bg-primary text-white" onclick="comecar()">Começar</button>
+        </div>
+
+        <!-- Cadastro da pessoa -->
+        <form id="form-pessoa" class="mt-4" style="display:none;">
+            <button id="btnFinalizarAgora" class="btn bg-danger mt-3 text-white" style="display:none;" type="button"
+                onclick="mostrarResultadoFinal()">Finalizar agora</button>
+            <h4 class="mb-3">Pessoa <span id="numeroPessoa">1</span></h4>
+            
+            <div class="mb-3">
+                <label class="form-label">Nome:</label>
+                <input type="text" class="form-control border border-secondary" id="nomePessoa" required />
+            </div>
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="selecionarTodos" id="selecionarTodos">
+                <label class="form-check-label" for="selecionarTodos">Selecionar Todos</label>
+            </div>            
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="estatura" id="estatura">
+                <label class="form-check-label" for="estatura">Estatura</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="massa" id="massa">
+                <label class="form-check-label" for="massa">Massa Corporal</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="envergadura"
+                    id="envergadura">
+                <label class="form-check-label" for="envergadura">Envergadura</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="perimetro"
+                    id="perimetro">
+                <label class="form-check-label" for="perimetro">Medida do perímetro da cintura (PC)</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="massaCorporal"
+                    id="massaCorporal">
+                <label class="form-check-label" for="massaCorporal">Índice de Massa Corporal (IMC)</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="RCE"
+                    id="RCE">
+                <label class="form-check-label" for="RCE">Razão cintura-estatura (RCE)</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="sentarAlcancar"
+                    id="sentarAlcancar">
+                <label class="form-check-label" for="sentarAlcancar">Teste de sentar e alcançar</label>
+            </div>
+            
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="abdominais"
+                    id="abdominais">
+                <label class="form-check-label" for="abdominais">Teste de abdominais em 1 minuto</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="corrida"
+                    id="corrida">
+                <label class="form-check-label" for="corrida">Teste de corrida/caminhada de 6 minutos</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="medicineBall"
+                    id="medicineBall">
+                <label class="form-check-label" for="medicineBall">Teste de arremesso do medicine ball de 2kg</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="SaltoHorizontal"
+                    id="SaltoHorizontal">
+                <label class="form-check-label" for="SaltoHorizontal">Teste de salto horizontal</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="testQuadrado"
+                    id="testQuadrado">
+                <label class="form-check-label" for="testQuadrado">Teste do quadrado de 4x4 metros</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input border border-secondary" type="checkbox" value="corrida20m"
+                    id="corrida20m">
+                <label class="form-check-label" for="corrida20m">Teste de corrida de 20 metros</label>
+            </div>
+            <button type="submit" class="btn bg-success mt-3 text-white">Próximo</button>
+        </form>
+
+        <!-- Medidas da pessoa -->
+        <form id="form-medidas" class="mt-4" style="display:none;">
+            <h5 class="mb-3">Preencha as medidas de <span id="nomeAtual"></span></h5>
+            <div id="inputsMedidas" class="mb-3"></div>
+            <button type="submit" class="btn bg-success text-white">Salvar e Continuar</button>
+        </form>
+
+        <!-- Resultados finais -->
+        <div id="resultadoFinal" class="mt-5" style="display:none;">
+            <h4 class="mb-3">Resumo de Todas as Pessoas:</h4>
+            <ul id="listaResultados" class="list-group mb-3"></ul>
+            <button class="btn bg-secondary me-2" onclick="continuarRodada()">Adicionar Mais</button>
+            <button class="btn bg-danger text-white" onclick="finalizarTudo()">Finalizar</button>
+        </div>
+    </div>
+    <script src="src/js/index.js" defer></script>
+    <script src="src/js/SPA.js" defer></script>
+    <script src="src/js/pageLoad.js" defer></script>
+    <script src="src/js/firebase.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

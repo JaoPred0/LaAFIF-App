@@ -1,0 +1,62 @@
+
+/* 🎯 Animate.css - Animações CSS prontas */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* 🚀 AOS (Animate On Scroll) - Animações ao rolar a página */
+@import url('https://unpkg.com/aos@next/dist/aos.css');
+
+/* 🔥 Font Awesome - Ícones personalizáveis */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* 🖋️ Google Fonts (Roboto) - Fonte estilizada */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* 🎡 Swiper - Biblioteca de carrosséis e sliders */
+@import url('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+
+/* 🧊 Normalize.css - Reset de estilos padrão */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+/* 🎨 Hover.css - Efeitos de hover em botões e elementos */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css');
+
+/* 🧰 Tailwind CSS - Utilitários CSS modernos */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+/* 📦 Boxicons - Ícones leves e modernos */
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+/* 🌈 Material Icons - Ícones estilo Google Material Design */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.oculto {
+    display: none !important;
+}
+
+.fade-in {
+    animation: aparecer 500ms ease-in forwards;
+}
+
+.fade-out {
+    animation: desaparecer 500ms ease-in forwards;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes desaparecer {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

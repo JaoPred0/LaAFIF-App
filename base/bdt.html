@@ -1,0 +1,382 @@
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary animate__animated animate__fadeInDown">
+    <div class="container-fluid">
+        <a class="navbar-brand" onclick="Spa('home')">LaAFIF App</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active animate__animated animate__bounceInLeft" aria-current="page"
+                        onclick="Spa('home')">
+                        <i class="fas fa-house-user"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link animate__animated animate__bounceInLeft" style="animation-delay: 0.2s;" href="#">
+                        <i class="fas fa-cog me-2"></i> Configurações
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger animate__animated animate__bounceInLeft"
+                        style="animation-delay: 0.5s;" id="logoutButton" href="#">
+                        <i class="fas fa-sign-out-alt"></i> Sair
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a onclick="Spa('home')">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Bateria de Teste</li>
+        </ol>
+    </nav>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <!-- Medida da estatura -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Medida da estatura
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Material:</b> Estadiômetro ou fita métrica com precisão até 2 mm.</p>
+                    <p><b>Orientação:</b> Na utilização da fita métrica (considerando que normalmente mede 150
+                        cm) se aconselha prendê-la à parede a 100 cm do solo, estendendo-a de baixo para
+                        cima (neste caso o avaliador não poderá esquecer de acrescentar 100 cm ao
+                        resultado aferido pela fita métrica). Para a leitura da estatura deve ser utilizado um
+                        dispositivo em forma de esquadro (ver a figura abaixo). Deste modo um dos lados do
+                        esquadro é fixado à parede e o lado perpendicular inferior junto à cabeça do aluno
+                        avaliado (este procedimento elimina erros decorrentes das possíveis inclinações de
+                        materiais tais como réguas ou pranchetas quando livremente apoiados apenas sobre
+                        a cabeça do sujeito avaliado).</p>
+                    <p><b>Anotação:</b> A medida da estatura é anotada em centímetros com uma casa após a
+                        vírgula.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/j-9_DJwJYFk?si=W0Gx3oYonyLA-jSe"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Medida da massa corporal -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Medida da massa corporal
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Material: </b>Uma balança portátil com precisão de até 500 gramas.</p>
+                    <p><b>Orientação:</b> As crianças e adolescentes devem ser aferidas preferencialmente em
+                        trajes de educação física e descalços. Deverão manter-se em pé com os cotovelos
+                        (braços) estendidos e juntos ao corpo.</p>
+                    <p><b>Anotação:</b> A medida deve ser anotada em quilogramas com a utilização de uma
+                        casa após a vírgula.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8qA14Jb2p5M?si=RVpH56x-rCPTqDFS"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Medida da envergadura -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Medida da envergadura
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Material:</b> Trena métrica com precisão de 2 mm ou duas fitas métricas unidas.</p>
+                    <p><b>Orientação:</b> Sobre uma parede, de preferência sem rodapé, é fixada uma trena
+                        métrica paralelamente ao solo a uma altura de 120 cm para os alunos menores e
+                        150 cm para os alunos maiores. O aluno se posiciona em pé, de frente para a
+                        parede, com os braços elevados e cotovelos estendidos em 90 graus em relação ao
+                        tronco. As palmas das mãos voltadas para a parede. O aluno deverá posicionar a
+                        extremidade do dedo médio esquerdo no ponto zero da trena, sendo medida a
+                        distância até a extremidade do dedo médio direito.</p>
+                    <p><b>Anotação:</b> A medida é registrada em centímetros com uma casa após a vírgula</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-2LMuIIUVVQ?si=7CFVv0hCNs-VpIHY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Medida do perímetro da cintura (PC) -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                    Medida do perímetro da cintura (PC)
+                </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Material:</b> Fita métrica flexível com resolução de 1 mm.</p>
+                    <p><b>Orientação:</b> A medida é realizada no ponto médio entre a borda inferior da última
+                        costela e a borda superior da crista ilíaca.</p>
+                    <p><b>Anotação:</b> A medida é registrada em centímetros com uma casa após a vírgula</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OkhNPXFhL7g?si=7pv2m0GszZS5yRRq"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Índice de Massa Corporal (IMC) -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                    Índice de Massa Corporal (IMC)
+                </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Orientação:</b> É determinado através do cálculo da razão (divisão) entre a medida de
+                        massa corporal total em quilogramas pela estatura em metros elevada ao quadrado
+                        (kg/m²).</p>
+                    <p><b>Anotação:</b> A medida é registrada com uma casa após a vírgula.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Razão cintura-estatura (RCE) -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                    Razão cintura-estatura (RCE)
+                </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Orientação:</b> É determinado através do cálculo da razão (divisão) entre a medida do
+                        perímetro da cintura em cm e a estatura em cm [cintura(cm)/estatura(cm)].</p>
+                    <p><b>Anotação:</b> A medida é registrada com uma casa após a virgula.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Teste de sentar e alcançar -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                    Teste de sentar e alcançar
+                </button>
+            </h2>
+            <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Material:</b> Fita métrica e fita adesiva.
+                        Orientação: Estenda uma fita métrica no solo. Na marca de 38 cm desta fita coloque
+                        um pedaço de fita adesiva de 30 cm em perpendicular. A fita adesiva deve fixar a fita
+                        métrica no solo. O aluno a ser avaliado deve estar descalço. Os calcanhares devem
+                        tocar a fita adesiva na marca dos 38 cm e estarem separados 30 cm. Com os
+                        joelhos estendidos e as mãos sobrepostas, o aluno inclina-se lentamente e estende
+                        as mãos para frente o mais distante possível. O aluno deve permanecer nesta
+                        posição o tempo necessário para a distância ser anotada. Serão realizadas duas
+                        tentativas.</p>
+                    <p><b>Anotação:</b> O resultado é medido em centímetros a partir da posição mais longínqua
+                        que o aluno pode alcançar na escala com as pontas dos dedos. Registram-se os
+                        resultados com uma casa após a vírgula. Para a avaliação será utilizado o melhor
+                        resultado.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cdugHSL6C_o?si=nBSEXQiX1wZJPzbc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Teste de abdominais em 1 minuto -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                    Teste de abdominais em 1 minuto
+                </button>
+            </h2>
+            <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Material:</b> Colchonetes e cronômetro.</p>
+                    <p><b>Orientação:</b> O aluno avaliado se posiciona em decúbito dorsal (de barriga para cima)
+                        com os joelhos flexionados a 45º e com os braços cruzados sobre o tórax. O
+                        avaliador, com as mãos, segura os tornozelos do estudante fixando-os ao solo. Ao
+                        sinal o aluno inicia os movimentos de flexão do tronco até tocar com os cotovelos
+                        nas coxas, retornando a posição inicial (não é necessário tocar com a cabeça no
+                        colchonete a cada execução). O aluno deverá realizar o maior número de repetições
+                        completas em 1 minuto.</p>
+                    <p><b>Anotação:</b> O resultado é expresso pelo número de movimentos completos realizados
+                        em 1 minuto.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Y2ppstBWUfg?si=tciQtvzOI_rKZECz"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Teste de corrida/caminhada de 6 minutos -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    Teste de corrida/caminhada de 6 minutos
+                </button>
+            </h2>
+            <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Material:</b> Local plano com marcação do perímetro da pista. Trena métrica.
+                        Cronômetro e ficha de registro.</p>
+                    <p><b>Orientação: </b>Divide-se os alunos em grupos adequados às dimensões da pista.
+                        Informa-se aos alunos sobre a execução do teste dando ênfase ao fato de que
+                        devem correr o maior tempo possível, evitando piques de velocidade intercalados
+                        por longas caminhadas. Durante o teste, informa-se ao aluno a passagem do tempo
+                        2, 4 e 5 (“Atenção: falta 1 minuto). Ao final do teste soará um sinal (apito) sendo que
+                        os alunos deverão interromper a corrida, permanecendo no lugar onde estavam (no
+                        momento do apito) até ser anotada ou sinalizada a distância percorrida.</p>
+                    <p><b>Anotação:</b> As anotações são em metros sem casa decimal.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1YxMuyf6cVs?si=cYPiWh1LUDkYcX36"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Teste de arremesso do medicine ball de 2kg -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                    Teste de arremesso do medicine ball de 2kg
+                </button>
+            </h2>
+            <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Material:</b> Uma trena e um medicine ball de 2 kg (pode ser utilizada uma medicine ball
+                        artesanal ou um saco de areia com 2 kg).</p>
+                    <p><b>Orientação:</b> A trena é fixada no solo perpendicularmente à parede. O ponto zero da
+                        trena é fixado junto à parede. O aluno senta-se com os joelhos estendidos, as
+                        pernas unidas e as costas completamente apoiadas à parede. Segura a medicine
+                        ball junto ao peito com os cotovelos flexionados. Ao sinal do avaliador o aluno
+                        deverá lançar a bola à maior distância possível, mantendo as costas apoiadas na
+                        parede. A distância do arremesso será registrada a partir do ponto zero até o local
+                        em que a bola tocou ao solo pela primeira vez. Serão realizados dois arremessos,
+                        registrando-se para fins de avaliação o melhor resultado.</p>
+                    <p><b>Anotação:</b> A medida será registrada em centímetros com uma casa após a vírgula.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MiIxu4vovzI?si=gaGD-_rOLcQB7iQT"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Teste de salto horizontal -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                    Teste de salto horizontal
+                </button>
+            </h2>
+            <div id="flush-collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Material:</b> Uma trena.</p>
+                    <p><b>Orientação:</b> A trena é fixada ao solo, perpendicularmente à linha de partida. A linha
+                        de partida pode ser sinalizada com giz, com fita crepe ou ser utilizada uma das
+                        linhas que demarcam as quadras esportivas. O ponto zero da trena situa-se sobre a
+                        linha de partida. O avaliado coloca-se imediatamente atrás da linha, com os pés
+                        paralelos, ligeiramente afastados, joelhos semiflexionados, tronco ligeiramente
+                        projetado à frente. Ao sinal o aluno deverá saltar a maior distância possível
+                        aterrissando com os dois pés em simultâneo. Serão realizadas duas tentativas
+                        considerando para fins de avaliação o melhor resultado.</p>
+                    <p><b>Anotação:</b> A distância do salto será registrada em centímetros, com uma casa após
+                        a vírgula, a partir da linha traçada no solo até o calcanhar mais próximo desta.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XhYAobKfh9M?si=j9h4ipYzQQ3f-C96"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Teste do quadrado de 4x4 metros -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                    Teste do quadrado de 4x4 metros
+                </button>
+            </h2>
+            <div id="flush-collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Material:</b> Um cronômetro, quatro cones/ garrafas do tipo PET de dois litros cheias de
+                        areia. Piso antiderrapante.</p>
+                    <p><b>Orientação:</b> Demarca-se um quadrado com quatro metros de lado. Coloca-se um
+                        cone (pode ser utilizada uma garrafa PET) em cada ângulo do quadrado. Uma fita
+                        crepe ou uma reta desenhada com giz indica a linha de partida (ver figura abaixo). O
+                        aluno parte da posição de pé, com um pé avançado à frente imediatamente atrás da
+                        linha de partida (num dos vértices do quadrado). Ao sinal do avaliador, deverá
+                        deslocar-se em velocidade máxima e tocar com uma das mãos no cone situado no
+                        canto em diagonal do quadrado (atravessa o quadrado). Na sequência, corre para
+                        tocar o cone à sua esquerda (ou direita) e depois se desloca para tocar o cone em
+                        diagonal (atravessa o quadrado em diagonal). Finalmente, corre em direção ao
+                        último cone, que corresponde ao ponto de partida. O cronômetro deverá ser
+                        acionado pelo avaliador quando o avaliado tocar pela primeira vez com o pé o
+                        interior do quadrado e será travado quando tocar com uma das mãos na quarta
+                        garrafa. Serão realizadas duas tentativas, sendo registrado para fins de avaliação o
+                        menor tempo.</p>
+                    <p><b>Anotação:</b> A medida será registrada em segundos e centésimos de segundo (duas
+                        casas após a vírgula).</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/UmtKjnxLJGo?si=y9ENg6QHOBM3cDjh"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThirteen" aria-expanded="false"
+                    aria-controls="flush-collapseThirteen">
+                    Teste de corrida de 20 metros
+                </button>
+            </h2>
+            <div id="flush-collapseThirteen" class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <p><b>Material:</b> Um cronômetro e quatro cones (ou garrafas PET).</p>
+                    <p><b>Orientação:</b> Uma pista de 20 metros demarcada com três linhas paralelas no solo da
+                        seguinte forma: a primeira (linha de partida); a segunda, distante 20m da primeira
+                        (linha de cronometragem) e a terceira linha, marcada a dois metros da segunda
+                        (linha de chegada). A terceira linha serve como referência de chegada para o aluno
+                        na tentativa de evitar a desaceleração antes de cruzar a linha de cronometragem.
+                        O estudante parte da posição de pé, com um pé avançado à frente imediatamente
+                        atrás da primeira linha (linha de partida) e será informado que deverá cruzar a
+                        terceira linha (linha de chegada) o mais rápido possível. Ao sinal do avaliador, o
+                        aluno deverá deslocar-se, o mais rápido possível, em direção à linha de chegada. O
+                        avaliador deverá acionar o cronômetro quando o avaliado, ao dar o primeiro passo,
+                        toque o solo pela primeira vez com um dos pés além da linha de partida. O
+                        cronômetro será travado quando o aluno ao cruzar a segunda linha (linha de
+                        cronometragem) tocar pela primeira vez ao solo.</p>
+                    <p><b>Anotação: </b>O cronometrista registrará o tempo do percurso em segundos e
+                        centésimos de segundos (duas casas após a vírgula).</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/G3BoIAaTX-U?si=JJ5XIRhkUsm8wSlx"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

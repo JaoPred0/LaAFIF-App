@@ -1,0 +1,44 @@
+:root {
+    --fundo: #212C95;
+}
+
+*{
+    background-color: var(--fundo) !important;
+    /* overflow-x: hidden; */
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+.logo-img {
+    max-width: 160px;
+}
+
+@media (min-width: 768px) {
+    .logo-img {
+        max-width: 220px;
+        /* Aumenta no PC */
+    }
+}
+
+.full-screen-center {
+    height: 100vh;
+}
+.container-fluid, .navbar-expand, .navbar, nav {
+    background-color: var(--fundo) !important;
+}
+ /* Customização de animação da navbar */
+ .navbar {
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.nav-item {
+    animation: bounceInLeft 0.8s ease-in-out;
+}
+
+/* Efeito no hover dos links */
+.nav-link:hover {
+    color: #ff6347 !important; /* Tom de laranja-avermelhado para destaque */
+    text-decoration: underline;
+}
