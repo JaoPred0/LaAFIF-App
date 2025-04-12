@@ -243,7 +243,6 @@ onAuthStateChanged(auth, async (user) => {
         console.error("Erro ao buscar dados:", err);
       }
     } else {
-      alert("Você precisa estar logado.");
       // Redireciona para login se quiser:
       // window.location.href = "login.html";
     }
